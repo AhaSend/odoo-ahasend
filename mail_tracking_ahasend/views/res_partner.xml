@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 AhaSend B.V.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.form.ahasend</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="mail_tracking.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="email_bounced" position="after">
+                <label
+                    for="action_ahasend_check_suppressed"
+                    string="AhaSend"
+                    invisible="not email"
+                    groups="base.group_system"
+                />
+                <div
+                    name="ahasend_buttons"
+                    invisible="not email"
+                    groups="base.group_system"
+                >
+                    <button
+                        name="action_ahasend_check_suppressed"
+                        type="object"
+                        string="Check suppression"
+                        class="oe_link"
+                    />
+                    <button
+                        name="action_ahasend_suppress"
+                        type="object"
+                        string="Suppress"
+                        class="oe_link"
+                        invisible="email_bounced"
+                        confirm="AhaSend will stop sending to this address."
+                    />
+                    <button
+                        name="action_ahasend_unsuppress"
+                        type="object"
+                        string="Remove suppression"
+                        class="oe_link"
+                        invisible="not email_bounced"
+                    />
+                </div>
+            </field>
+        </field>
+    </record>
+</odoo>

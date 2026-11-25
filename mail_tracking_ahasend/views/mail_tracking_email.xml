@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 AhaSend B.V.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="mail_tracking_email_view_form" model="ir.ui.view">
+        <field name="name">mail.tracking.email.form.ahasend</field>
+        <field name="model">mail.tracking.email</field>
+        <field name="inherit_id" ref="mail_tracking.view_mail_tracking_email_form" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <button
+                    name="action_manual_check_ahasend"
+                    type="object"
+                    string="Check AhaSend"
+                    invisible="not message_id"
+                    groups="base.group_system"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
