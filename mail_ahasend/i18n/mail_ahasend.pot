@@ -1,0 +1,175 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_ahasend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20261124\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-25 22:50+0000\n"
+"PO-Revision-Date: 2026-11-25 22:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\" title=\"Warning\"/>\n"
+"                            AhaSend can only send events and email to a public https:// address."
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "<i class=\"oi oi-arrow-right\"/> Read the setup guide"
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "Account"
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "Account ID"
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "AhaSend"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model,name:mail_ahasend.model_ahasend_api
+msgid "AhaSend API helper"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,field_description:mail_ahasend.field_res_config_settings__mail_ahasend_account_id
+msgid "AhaSend account ID"
+msgstr ""
+
+#. module: mail_ahasend
+#. odoo-python
+#: code:addons/mail_ahasend/models/ahasend_api.py:0
+msgid "AhaSend answered %(status)s: %(message)s"
+msgstr ""
+
+#. module: mail_ahasend
+#. odoo-python
+#: code:addons/mail_ahasend/models/ahasend_api.py:0
+msgid ""
+"AhaSend can only call a public https:// address. Set the Odoo URL in the "
+"AhaSend settings."
+msgstr ""
+
+#. module: mail_ahasend
+#. odoo-python
+#: code:addons/mail_ahasend/models/ahasend_api.py:0
+msgid "AhaSend could not be reached: %s"
+msgstr ""
+
+#. module: mail_ahasend
+#. odoo-python
+#: code:addons/mail_ahasend/wizards/res_config_settings.py:0
+msgid "AhaSend is still connected"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,field_description:mail_ahasend.field_res_config_settings__mail_ahasend_api_key
+msgid "AhaSend secret key"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,field_description:mail_ahasend.field_res_config_settings__mail_ahasend_domain
+msgid "AhaSend sending domain"
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "All domains"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model,name:mail_ahasend.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,field_description:mail_ahasend.field_res_config_settings__mail_ahasend_enabled
+msgid "Connect Odoo to AhaSend"
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "Connect Odoo to your AhaSend account."
+msgstr ""
+
+#. module: mail_ahasend
+#. odoo-python
+#: code:addons/mail_ahasend/wizards/res_config_settings.py:0
+msgid ""
+"Disconnect %(features)s first. Turning AhaSend off would leave them active "
+"in your AhaSend account."
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,help:mail_ahasend.field_res_config_settings__mail_ahasend_domain
+msgid ""
+"Limit the webhook and the suppression actions to this sending domain. Leave "
+"empty for all domains of the account."
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "Odoo URL"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,field_description:mail_ahasend.field_res_config_settings__mail_ahasend_base_url
+msgid "Odoo URL for AhaSend"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,field_description:mail_ahasend.field_res_config_settings__mail_ahasend_url_is_public
+msgid "Odoo URL is public"
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "Secret key"
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,help:mail_ahasend.field_res_config_settings__mail_ahasend_api_key
+msgid ""
+"Secret key of an AhaSend API key. The scopes it needs depend on the AhaSend "
+"features you use; the setup guide lists them."
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "Sending domain"
+msgstr ""
+
+#. module: mail_ahasend
+#. odoo-python
+#: code:addons/mail_ahasend/models/ahasend_api.py:0
+msgid "Set the AhaSend API key and account ID in the settings."
+msgstr ""
+
+#. module: mail_ahasend
+#: model:ir.model.fields,help:mail_ahasend.field_res_config_settings__mail_ahasend_base_url
+msgid ""
+"The public https:// address AhaSend sends events and email to. Filled in "
+"with the base URL of this Odoo; change it when AhaSend must reach Odoo on "
+"another address."
+msgstr ""
+
+#. module: mail_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_ahasend.res_config_settings_view_form
+msgid "https://odoo.example.com"
+msgstr ""

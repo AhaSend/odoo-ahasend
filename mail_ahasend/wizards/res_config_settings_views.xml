@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 AhaSend B.V.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ahasend</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="mail.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <block id="emails" position="after">
+                <block title="AhaSend" id="mail_ahasend_block">
+                    <setting
+                        id="mail_ahasend"
+                        class="col-lg-12"
+                        string="Account"
+                        help="Connect Odoo to your AhaSend account."
+                    >
+                        <field name="mail_ahasend_enabled" />
+                        <field name="mail_ahasend_url_is_public" invisible="1" />
+                        <div class="mt4">
+                            <a
+                                href="https://ahasend.com/docs/guides/odoo"
+                                target="_blank"
+                            ><i class="oi oi-arrow-right" /> Read the setup guide</a>
+                        </div>
+                        <div
+                            id="mail_ahasend_settings"
+                            class="content-group"
+                            invisible="not mail_ahasend_enabled"
+                        >
+                            <div class="row mt16">
+                                <label
+                                    for="mail_ahasend_account_id"
+                                    string="Account ID"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_ahasend_account_id"
+                                    required="mail_ahasend_enabled"
+                                />
+                            </div>
+                            <div class="row">
+                                <label
+                                    for="mail_ahasend_api_key"
+                                    string="Secret key"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_ahasend_api_key"
+                                    password="True"
+                                    required="mail_ahasend_enabled"
+                                />
+                            </div>
+                            <div class="row">
+                                <label
+                                    for="mail_ahasend_domain"
+                                    string="Sending domain"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_ahasend_domain"
+                                    placeholder="All domains"
+                                />
+                            </div>
+                            <div class="row">
+                                <label
+                                    for="mail_ahasend_base_url"
+                                    string="Odoo URL"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_ahasend_base_url"
+                                    placeholder="https://odoo.example.com"
+                                />
+                            </div>
+                            <div
+                                class="text-warning"
+                                invisible="mail_ahasend_url_is_public"
+                            >
+                            <i class="fa fa-exclamation-triangle" title="Warning" />
+                            AhaSend can only send events and email to a public https:// address.
+                        </div>
+                        </div>
+                    </setting>
+                </block>
+            </block>
+        </field>
+    </record>
+</odoo>
