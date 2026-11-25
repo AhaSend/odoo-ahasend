@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 AhaSend B.V.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.ahasend.tracking</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="mail_ahasend.res_config_settings_view_form" />
+        <!-- Views apply by priority, each one right after the AhaSend box:
+             the highest priority comes first. Tracking, inbound, test copies. -->
+        <field name="priority">30</field>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='mail_ahasend']" position="after">
+                <setting
+                    id="mail_tracking_ahasend"
+                    class="col-lg-12"
+                    string="Delivery tracking"
+                    help="Delivery, bounce, open and click events in Odoo's mail tracking."
+                    invisible="not mail_ahasend_enabled"
+                >
+                    <field name="mail_tracking_ahasend_webhook_id" invisible="1" />
+                    <div class="content-group">
+                        <div
+                            class="mt8 text-success"
+                            invisible="not mail_tracking_ahasend_webhook_id"
+                        >
+                            <i class="fa fa-check" title="Connected" /> Connected.
+                            Odoo will now receive tracking events from AhaSend.
+                        </div>
+                        <div class="mt8">
+                            <button
+                                type="object"
+                                name="action_ahasend_register_webhook"
+                                string="Connect tracking"
+                                icon="oi-arrow-right"
+                                class="btn-link"
+                                invisible="mail_tracking_ahasend_webhook_id"
+                            />
+                            <button
+                                type="object"
+                                name="action_ahasend_unregister_webhook"
+                                string="Disconnect tracking"
+                                icon="oi-arrow-right"
+                                class="btn-link"
+                                invisible="not mail_tracking_ahasend_webhook_id"
+                                confirm="This deletes the AhaSend webhook that Odoo created. Odoo stops receiving tracking events until you connect again. The contact buttons keep working."
+                            />
+                        </div>
+                        <div class="mt8">
+                            <button
+                                type="object"
+                                name="action_ahasend_sync"
+                                string="Sync from AhaSend"
+                                icon="oi-arrow-right"
+                                class="btn-link"
+                            />
+                            <div class="text-muted">
+                                Fetches the status of the emails of the last 2 days
+                                from AhaSend, for events Odoo missed.
+                            </div>
+                        </div>
+                        <div class="mt16" groups="base.group_no_one">
+                            <div class="o_form_label">Manual webhook setup</div>
+                            <div class="text-muted">
+                                Only needed when you create the webhook in the
+                                AhaSend dashboard yourself.
+                            </div>
+                            <div>
+                                <a
+                                    href="https://dash.ahasend.com/account/-/developers/webhooks"
+                                    target="_blank"
+                                ><i
+                                    class="oi oi-arrow-right"
+                                /> Open the webhooks page</a>
+                            </div>
+                            <div class="row mt8">
+                                <label
+                                    for="mail_tracking_ahasend_webhook_url"
+                                    string="Endpoint URL"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_tracking_ahasend_webhook_url"
+                                    widget="CopyClipboardChar"
+                                />
+                            </div>
+                            <div class="row">
+                                <label
+                                    for="mail_tracking_ahasend_webhook_secret"
+                                    string="Webhook secret"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_tracking_ahasend_webhook_secret"
+                                    password="True"
+                                />
+                            </div>
+                            <div
+                                class="row"
+                                invisible="not mail_tracking_ahasend_webhook_id"
+                            >
+                                <label
+                                    for="mail_tracking_ahasend_webhook_id"
+                                    string="Webhook ID"
+                                    class="col-lg-3 o_light_label"
+                                />
+                                <field
+                                    class="col-lg-5"
+                                    name="mail_tracking_ahasend_webhook_id"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
