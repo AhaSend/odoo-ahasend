@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_sandbox_ahasend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20261123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-25 22:54+0000\n"
+"PO-Revision-Date: 2026-11-25 22:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-flask\" title=\"Sandbox\"/> This database is a\n"
+"                            neutralized copy: its email goes to the AhaSend sandbox."
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#. odoo-python
+#: code:addons/mail_sandbox_ahasend/wizards/res_config_settings.py:0
+msgid "A sandbox credential is already set. Clear it first."
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_res_config_settings__mail_sandbox_ahasend_smtp_password
+msgid "AhaSend sandbox SMTP password"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_res_config_settings__mail_sandbox_ahasend_smtp_user
+msgid "AhaSend sandbox SMTP username"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model,name:mail_sandbox_ahasend.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid "Create sandbox credential"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid "Disconnect test copies"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_ir_mail_server__display_name
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_ir_mail_server__id
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model,name:mail_sandbox_ahasend.model_ir_mail_server
+msgid "Mail Server"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid ""
+"Neutralized copies of this database send their email to the AhaSend sandbox,"
+" where you can view it. Nothing is delivered."
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid "Sandbox password"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid "Sandbox username"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#. odoo-python
+#: code:addons/mail_sandbox_ahasend/wizards/res_config_settings.py:0
+msgid "Set the username and password of the sandbox credential."
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid "Test copies"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model.fields,field_description:mail_sandbox_ahasend.field_res_config_settings__mail_sandbox_ahasend_is_copy
+msgid "This database is a neutralized copy"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#. odoo-python
+#: code:addons/mail_sandbox_ahasend/wizards/res_config_settings.py:0
+msgid ""
+"This database is not a neutralized copy. Its email keeps going out normally."
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid ""
+"This removes the sandbox username and password from Odoo. Copies made from "
+"now on send no email at all. The credential stays in your AhaSend account; "
+"you can delete it on the credentials page of the dashboard."
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model_terms:ir.ui.view,arch_db:mail_sandbox_ahasend.res_config_settings_view_form
+msgid "Use the AhaSend sandbox"
+msgstr ""
+
+#. module: mail_sandbox_ahasend
+#: model:ir.model.fields,help:mail_sandbox_ahasend.field_res_config_settings__mail_sandbox_ahasend_smtp_user
+msgid ""
+"Username of an AhaSend SMTP credential in sandbox mode. Copies of this "
+"database send their email with it."
+msgstr ""
